@@ -29,7 +29,7 @@ for($i = 0; $i < $countfiles; $i++) {
                 move_uploaded_file($_FILES['images']['tmp_name'][$i], $upfile);
                 array_push($file_names, $photo_name);
             }
-            else echo "Ошибка";
+            else echo "Error";
         }
     }
 }
