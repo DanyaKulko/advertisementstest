@@ -22,7 +22,7 @@ $q = mysqli_query($con, $query);
 
 
 if(mysqli_num_rows($q) == 0)
-	return_answer(array('success' => false, 'message' => 'No posts', 'query' => $query));
+	return_answer(array('success' => false, 'message' => 'No posts'));
 
 
 $records = mysqli_query($con, "SELECT id FROM advertisements");
@@ -42,7 +42,7 @@ while($ex = mysqli_fetch_assoc($q)) {
 }
 
 
-return_answer(array('success' => true, 'posts' => $response, 'pages' => $totalPages, 'current_page' => $page, 'query' => $query));
+return_answer(array('success' => true, 'posts' => $response, 'pages' => $totalPages, 'current_page' => $page));
 
 
 
